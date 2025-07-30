@@ -1,0 +1,290 @@
+:root {
+    --cor-primaria: #000000;
+    /* azul violeta */
+    --cor-secundaria: #000000;
+    /* roxo escuro */
+    --cor-texto: #ffffff;
+    --cor-destaque: #00FF08;
+    /* amarelo mostarda */
+    --cor-fundo-geral: #0A1A2B;
+    --cor-fundo-especialidades: #1B2A47;
+    --cor-navbar: #121212;
+    --cor-verde-neon: #00FF08;
+    /* pra efeitos que já usa */
+}
+
+/* ------------------ RESET ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* ------------------ BODY ------------------ */
+body {
+    background-color: var(--cor-fundo-geral);
+    color: var(--cor-texto);
+    overflow-x: hidden;
+    line-height: 1.6;
+    font-size: 16px;
+    height: 100vh;
+}
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-padding {
+    padding: 60px 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--cor-navbar);
+    border-bottom: 1px solid #222;
+    box-shadow: 0 2px 8px rgba(255, 22, 22, 0.533);
+}
+
+
+
+.navbar-nav {
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.navbar-nav .nav-link {
+    margin: 0;
+    transition: 0.3s ease;
+}
+
+
+.nav-link:hover {
+    color: #00FF08;
+}
+
+
+ul {
+    padding-left: 1.2em;
+    /* espaço padrão para listas */
+}
+
+/* Estilo base para listas */
+li {
+    color: var(--cor-texto);
+    font-size: 16px;
+}
+
+li::marker {
+    color: #00FF08;
+    /* Marcador da lista verde */
+}
+
+/* Destaque com span */
+span {
+    color: var(--cor-destaque) !important;
+}
+
+/* Estilo da imagem personalizada (perfil ou avatar) */
+.img-custom {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 4px #00ff00;
+    /* Glow neon verde */
+}
+
+/* Botão verde genérico */
+.botao-verde {
+    font-size: 18px;
+    padding: 5px 26px;
+    background-color: #00FF08;
+    color: black;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+}
+
+.botao-verde:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #00FF08;
+    text-decoration: none;
+}
+
+/* Classe para o botão Bootstrap com sua cor personalizada */
+.btn-verde {
+    background-color: #00FF08 !important;
+    color: black !important;
+    border: none;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-verde:hover {
+    background-color: #00cc06 !important;
+    color: black !important;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #00FF08;
+    text-decoration: none;
+}
+
+/* Corrige botão .btn-success (caso use o Bootstrap padrão) */
+.btn-success {
+    background-color: #00FF08 !important;
+    border-color: #00FF08 !important;
+    color: black !important;
+}
+
+.btn-success:hover {
+    background-color: #00cc06 !important;
+    border-color: #00cc06 !important;
+    color: black !important;
+}
+
+/* Estilização geral para qualquer botão ao passar o mouse */
+button:hover,
+form .btn-enviar input:hover,
+a.btn:hover {
+    box-shadow: 0 0 8px #00FF08;
+    transform: scale(1.05);
+}
+
+
+.img-flutuante {
+    position: relative;
+    margin-top: 20px;
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    animation: flutuar 3s ease-in-out infinite alternate;
+    object-fit: cover;
+    box-shadow: 0 0px 20px #00FF08;
+    transition: box-shadow 0.5s ease;
+}
+
+.img-flutuante:hover {
+    box-shadow: 0 0px 60px rgba(0, 255, 8, 0.7);
+
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(45px);
+    }
+}
+
+/* Espaçamento da seção */
+section#especialidades {
+    background-color: var(--cor-fundo-especialidades);
+    padding: 100px 4%;
+    margin-top: 150px;
+}
+
+
+/* Estilo dos cards */
+#especialidades .box-card {
+    border: 1px solid #00FF0880;
+    background-color: transparent;
+    color: white;
+    padding: 40px 30px;
+    border-radius: 25px;
+    margin-top: 45px;
+    margin-bottom: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+}
+
+
+
+/* Hover com zoom e sombra */
+#especialidades .box-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff78;
+}
+
+/* Ícones */
+#especialidades i {
+    font-size: 70px;
+    color: #00FF08;
+}
+
+/* Títulos */
+#especialidades h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+#especialidades h3:hover {
+    color: #00FF08;
+    transition: color 0.3s ease;
+}
+
+/* Sobre */
+#sobre {
+    background-color: var(--cor-fundo-geral);
+    color: var(--cor-texto);
+    padding: 60px 15px;
+    border-radius: 8px;
+
+}
+
+/* Sombra verde para imagem e efeito hover */
+.sombra-verde {
+    box-shadow: 0 0 15px #00FF08;
+    transition: box-shadow 0.5s ease;
+}
+
+.sombra-verde:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 8, 0.7);
+}
+
+/* Botões sociais personalizados */
+.btn-social-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.2s ease;
+    color: black;
+}
+
+.btn-social-icon:hover {
+    box-shadow: 0 0 15px #00FF08;
+    color: black;
+}
+
+/* Justify texto (fallback para navegadores que não suportam) */
+.text-justify {
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .titulo {
+        font-size: 24px;
+    }
+
+    .botao {
+        width: 100%;
+    }
+}
